@@ -1,5 +1,92 @@
 #include <iostream>
 
+int main()
+{
+    int contador{ 0 };
+    while (contador < 10)
+    {
+        if (contador == 5)
+            continue; // salta al final del cuerpo del loop
+
+        std::cout << contador << ' ';
+
+        ++contador; // esta declaración deja de ejecutarse cuando contador llega a 5
+
+        // La declaración continue salta aquí
+    }
+
+    return 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*#include <iostream>
+
+int main()
+{
+    for (int contador{ 0 }; contador < 10; ++contador)
+    {
+        // si el número es divisible por 4, saltar esta iteración
+        if ((contador % 4) == 0)
+            continue; // ir a la próxima iteración
+
+        // Si el número no es divisible por 4, seguir adelante
+        std::cout << contador << '\n';
+
+        // La declaración continue salta aquí
+    }
+
+    return 0;
+}*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*#include <iostream>
+
 int breakOReturn()
 {
     while (true) // loop infinito
@@ -15,7 +102,7 @@ int breakOReturn()
             return 1; // return hará que la función vuelva inmediatamente al llamador (en este caso, main())
     }
 
-    // breaking the loop causes execution to resume here
+    // breaking el loop hace que la ejecución continúe aquí
 
     std::cout << "El break del loop llevará la ejecución aquí\n";
 
@@ -24,11 +111,10 @@ int breakOReturn()
 
 int main()
 {
-    setlocale(LC_ALL, "es_ES.UTF-8");
     int devolverValor{ breakOReturn() };
     std::cout << "La función breakOReturn ha devuelto " << devolverValor << '\n';
     return 0;
-}
+}*/
 
 
 
@@ -159,41 +245,5 @@ int main()
 
 
 
-/*#include <iostream>
 
-int main()
-{
-    for (int contador{ 0 }; contador < 10; ++contador)
-    {
-        // si el número es divisible por 4, saltar esta iteración
-        if ((contador % 4) == 0)
-            continue; // ir a la próxima iteración
 
-        // Si el número no es divisible por 4, seguir adelante
-        std::cout << contador << '\n';
-
-        // La declaración continue salta aquí
-    }
-
-    return 0;
-}*/
-
-/*#include <iostream>
-
-int main()
-{
-    int contador{ 0 };
-    while (contador < 10)
-    {
-        if (contador == 5)
-            continue; // salta al final del cuerpo del loop
-
-        std::cout << contador << ' ';
-
-        ++contador; // esta declaración deja de ejecutarse cuando contador llega a 5
-
-        // La declaración continue salta aquí
-    }
-
-    return 0;
-}*/
