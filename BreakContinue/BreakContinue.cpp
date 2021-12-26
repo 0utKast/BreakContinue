@@ -1,3 +1,125 @@
+#include <iostream>
+
+int breakOReturn()
+{
+    while (true) // loop infinito
+    {
+        std::cout << "Escribe 'b' para break o 'r' para return: ";
+        char ch;
+        std::cin >> ch;
+
+        if (ch == 'b')
+            break; // la ejecución continuará en la primera declaración fuera del loop
+
+        if (ch == 'r')
+            return 1; // return hará que la función vuelva inmediatamente al llamador (en este caso, main())
+    }
+
+    // breaking the loop causes execution to resume here
+
+    std::cout << "El break del loop llevará la ejecución aquí\n";
+
+    return 0;
+}
+
+int main()
+{
+    setlocale(LC_ALL, "es_ES.UTF-8");
+    int devolverValor{ breakOReturn() };
+    std::cout << "La función breakOReturn ha devuelto " << devolverValor << '\n';
+    return 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*#include <iostream>
+
+int main()
+{
+    while (true) // loop infinito
+    {
+        std::cout << "Escribe 0 para salir o cualquier otro entero para continuar: ";
+        int num{};
+        std::cin >> num;
+
+        // salir del loop si el usuario escribe 0
+        if (num == 0)
+            break;
+    }
+
+    std::cout << "Ahora ya estamos fuera del loop\n";
+
+    return 0;
+}*/
+
+
+
+
+
+
+
+
+
+/*#include <iostream>
+
+int main()
+{
+    setlocale(LC_ALL, "es_ES.UTF-8");
+    int sum{ 0 };
+
+    // Permite al usuario escribir hasta 10 números
+    for (int contador{ 0 }; contador < 10; ++contador)
+    {
+        std::cout << "Escribe un número para sumar, ó 0 para salir: ";
+        int num{};
+        std::cin >> num;
+
+        // salir del loop si el usuario escribe 0
+        if (num == 0)
+            break; // salir del loop ahora
+
+        // en otro caso añadir número a nuestra suma
+        sum += num;
+    }
+
+    // La ejecución continuará aquí después del break
+    std::cout << "La suma de todos los números que ha escrito es: " << sum << "\n";
+
+    return 0;
+}*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /*#include <iostream>
 
 void printMath(int x, int y, char ch)
@@ -28,84 +150,13 @@ int main()
 
 
 
-/*#include <iostream>
 
-int main()
-{
-    int sum{ 0 };
 
-    // Permite al usuario escribir hasta 10 números
-    for (int contador{ 0 }; contador < 10; ++contador)
-    {
-        std::cout << "Escribe un número para sumar, ó 0 para salir: ";
-        int num{};
-        std::cin >> num;
 
-        // salir del loop si el usuario escribe 0
-        if (num == 0)
-            break; // salir del loop ahora
 
-        // en otro caso añadir número a nuestra suma
-        sum += num;
-    }
 
-    // La ejecución continuará aquí después del break
-    std::cout << "La suma de todos los números que ha escrito es: " << sum << "\n";
 
-    return 0;
-}*/
 
-/*include <iostream>
-
-int main()
-{
-    while (true) // loop infinito
-    {
-        std::cout << "Escribe 0 para salir o cualquier otro entero para continuar: ";
-        int num{};
-        std::cin >> num;
-
-        // salir del loop si el usuario escribe 0
-        if (num == 0)
-            break;
-    }
-
-    std::cout << "Ahora ya estamos fuera del loop\n";
-
-    return 0;
-}*/
-
-/*#include <iostream>
-
-int breakOReturn()
-{
-    while (true) // loop infinito
-    {
-        std::cout << "Escribe 'b' para break o 'r' para return: ";
-        char ch;
-        std::cin >> ch;
-
-        if (ch == 'b')
-            break; // la ejecución continuará en la primera declaración fuera del loop
-
-        if (ch == 'r')
-            return 1; // return hará que la función vuelva inmediatamente al llamador (en este caso, main())
-    }
-
-    // breaking the loop causes execution to resume here
-
-    std::cout << "El break del loop llevará la ejecución aquí\n";
-
-    return 0;
-}
-
-int main()
-{
-    int devolverValor{ breakOReturn() };
-    std::cout << "La función breakOReturn ha vuelto " << devolverValor << '\n';
-
-    return 0;
-}*/
 
 
 /*#include <iostream>
@@ -127,7 +178,7 @@ int main()
     return 0;
 }*/
 
-#include <iostream>
+/*#include <iostream>
 
 int main()
 {
@@ -145,4 +196,4 @@ int main()
     }
 
     return 0;
-}
+}*/
